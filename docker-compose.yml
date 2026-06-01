@@ -1,0 +1,57 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: api-laravel_app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    ports:
+      - '8000:8000'
+    command: php artisan serve --host=0.0.0.0 --port=8000
+    networks:
+      - api-laravel_network
+  cron:
+    build:
+      context: .
+      dockerfile: Dockerfile.cron
+    container_name: api-laravel_cron
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    networks:
+      - api-laravel_network
+  redis:
+    image: redis:8.2.1-alpine
+    container_name: redis_cache
+    restart: unless-stopped
+    ports:
+      - '${REDIS_PORT:-6379}:6379'
+    networks:
+      - api-laravel_network
+  db:
+    image: postgres:17-alpine
+    container_name: postgres_db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=${DB_DATABASE:-facturacion_ivss}
+      - POSTGRES_USER=${DB_USERNAME:-appuser}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-apppassword}
+    ports:
+      - '${DB_PORT:-5432}:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - api-laravel_network
+networks:
+  api-laravel_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
+          gateway: 172.30.0.1
+volumes:
+  postgres-data:

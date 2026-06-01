@@ -1,0 +1,73 @@
+# ============================================
+# Docker Ignore - Optimización de contexto
+# ============================================
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Dependencias de node (si aplica)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Entornos
+.env
+.env.*
+!.env.example
+.env.local
+.env.production
+
+# Docker
+Dockerfile
+Dockerfile.*
+docker-compose*
+.dockerignore
+
+# Tests
+tests/
+phpunit.xml
+.phpunit.result.cache
+coverage/
+.phpunit.cache
+
+# Documentación
+README.md
+CHANGELOG.md
+LICENSE
+CONTRIBUTING.md
+docs/
+*.md
+
+# Archivos de desarrollo
+*.log
+*.cache
+.php-cs-fixer.cache
+.phpunit.cache
+
+# Backup y temporales
+*.bak
+*.tmp
+*.temp
+*.old
+*.orig
+
+# Laravel
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+/storage/*.key
+/storage/logs/*
+!/storage/logs/.gitignore
+
+#Otros
+.DS_Store
+Thumbs.db
