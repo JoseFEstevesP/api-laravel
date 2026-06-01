@@ -6,8 +6,8 @@ API REST para el sistema de facturación del IVSS con autenticación JWT.
 
 ```bash
 # Clonar repositorio
-git clone https://github.com/gato99/facturacion_ivss_API.git
-cd facturacion_ivss_API
+git clone https://github.com/gato99/apppostgre_API.git
+cd apppostgre_API
 
 # Instalar dependencias
 composer install
@@ -44,7 +44,7 @@ docker compose exec app php artisan migrate
 | `DB_CONNECTION` | Driver        | `pgsql`               | `pgsql`        |
 | `DB_HOST`       | Host          | `db`                  | IP remota      |
 | `DB_PORT`       | Puerto        | `5432`                | según servidor |
-| `DB_DATABASE`   | Base de datos | `facturacion_ivss`    | según servidor |
+| `DB_DATABASE`   | Base de datos | `apppostgre`    | según servidor |
 | `DB_USERNAME`   | Usuario       | `appuser`             | según servidor |
 | `DB_PASSWORD`   | Contraseña    | -                     | según servidor |
 | `DB_SCHEMA`     | Schema        | `public`              | `public`       |

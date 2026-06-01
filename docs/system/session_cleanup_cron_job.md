@@ -18,10 +18,10 @@ Para que el scheduler de Laravel funcione, debes agregar esta entrada al cron de
 * * * * * cd /ruta/a/tu/aplicacion && php artisan schedule:run >> /dev/null 2>&1
 ```
 
-Por ejemplo, si tu aplicación está en `/home/gato99/Documentos/proyectos/trabajo/facturacion_ivss_API`, el comando sería:
+Por ejemplo, si tu aplicación está en `/home/gato99/Documentos/proyectos/trabajo/apppostgre_API`, el comando sería:
 
 ```bash
-* * * * * cd /home/gato99/Documentos/proyectos/trabajo/facturacion_ivss_API && php artisan schedule:run >> /dev/null 2>&1
+* * * * * cd /home/gato99/Documentos/proyectos/trabajo/apppostgre_API && php artisan schedule:run >> /dev/null 2>&1
 ```
 
 ### Cómo agregar el cron job:

@@ -23,4 +23,5 @@ enum Permission: string
   // Session
   case SESSION_READ = 'session.read';
   case SESSION_DELETE = 'session.delete';
+
 }

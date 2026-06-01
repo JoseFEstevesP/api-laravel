@@ -65,7 +65,7 @@ jobs:
       postgres:
         image: postgres:16-alpine
         env:
-          POSTGRES_DB: facturacion_ivss_test
+          POSTGRES_DB: apppostgre_test
           POSTGRES_USER: appuser
           POSTGRES_PASSWORD: apppassword
         ports:
@@ -85,7 +85,7 @@ jobs:
       DB_CONNECTION: pgsql
       DB_HOST: localhost
       DB_PORT: 5432
-      DB_DATABASE: facturacion_ivss_test
+      DB_DATABASE: apppostgre_test
       DB_USERNAME: appuser
       DB_PASSWORD: apppassword
       CACHE_DRIVER: array
