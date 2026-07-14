@@ -191,11 +191,20 @@ docker compose --profile local up -d
 
 ## Documentación
 
-- **[Módulo User](docs/modules/user.md)** - Autenticación y usuarios
-- **[Módulo Rol](docs/modules/rol.md)** - Roles y permisos (RBAC)
-- **[Módulo Session](docs/modules/session.md)** - Gestión de sesiones
-- **[Módulo Ip](docs/modules/ip.md)** - Control de IPs
-- **[Módulo Audit](docs/modules/audit.md)** - Auditoría
-- **[Módulo Facturación](docs/modules/facturacion.md)** - Proceso de post-facturación
+### Módulos
+
+- **[User](docs/modules/user.md)** - Autenticación y usuarios
+- **[Rol](docs/modules/rol.md)** - Roles y permisos (RBAC)
+- **[Session](docs/modules/session.md)** - Gestión de sesiones
+- **[Audit](docs/modules/audit.md)** - Auditoría
+
+### Sistema
+
 - **[Logging](docs/system/logging_system.md)** - Sistema de registros
 - **[Limpieza de Sesiones](docs/system/session_cleanup_cron_job.md)** - Tareas programadas
+- **[Validation Metrics](docs/system/validation_metrics.md)** - Métricas de validación
+
+### Arquitectura
+
+- **[Migration Strategy](docs/architecture/migration_strategy.md)** - Estrategia de migración
+- **[Implementation Plan](docs/architecture/implementation_plan.md)** - Plan de implementación
